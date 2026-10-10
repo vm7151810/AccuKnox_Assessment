@@ -27,7 +27,7 @@
    `User → API/auth → guardrails (input) → query understanding → retrieval → context assembly → LLM → guardrails (output) → response`
 
 <p align="center">
-  <img title="" src="file:///home/mivikev/snap/marktext/9/.config/marktext/images/2026-10-10-10-07-23-image.png" alt="" data-align="center" width="465">
+  <img title="" src="images/2026-10-10-10-07-23-image.png" alt="" data-align="center" width="465">
 </p>
 
 ##### Architectural components:
