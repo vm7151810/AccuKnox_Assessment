@@ -1,0 +1,134 @@
+[
+  {
+    "id": "STU001",
+    "name": "Alice Johnson",
+    "section": "Section A",
+    "scores": {
+      "Math": 88.0,
+      "Science": 92.0,
+      "English": 85.0,
+      "History": 90.0
+    }
+  },
+  {
+    "id": "STU002",
+    "name": "Robert Smith",
+    "section": "Section A",
+    "scores": {
+      "Math": 72.0,
+      "Science": 78.0,
+      "English": 75.0,
+      "History": 80.0
+    }
+  },
+  {
+    "id": "STU003",
+    "name": "Charles Davis",
+    "section": "Section A",
+    "scores": {
+      "Math": "85",
+      "Science": 89.0,
+      "English": 84.0,
+      "History": 87.0
+    }
+  },
+  {
+    "id": "STU004",
+    "name": "Danielle Perez",
+    "section": "Section A",
+    "scores": {
+      "Math": 64.0,
+      "Science": 70.0,
+      "English": 68.0,
+      "History": 72.0
+    }
+  },
+  {
+    "id": "STU005",
+    "name": "Ethan Brown",
+    "section": "Section A",
+    "scores": {
+      "Math": 93.0,
+      "Science": 142.0,
+      "English": 95.0,
+      "History": 91.0
+    }
+  },
+  {
+    "id": "STU006",
+    "name": "Fiona Miller",
+    "section": "Section A",
+    "scores": {
+      "Math": 79.0,
+      "Science": 82.0,
+      "English": 77.0,
+      "History": 81.0
+    }
+  },
+  {
+    "id": "STU007",
+    "name": "George Clark",
+    "section": "Section B",
+    "scores": {
+      "Math": 91.0,
+      "Science": 94.0,
+      "English": 89.0,
+      "History": 93.0
+    }
+  },
+  {
+    "id": "STU008",
+    "name": "Hannah Wilson",
+    "section": "Section B",
+    "scores": {
+      "Math": 86.0,
+      "Science": 89.0,
+      "English": null,
+      "History": 92.0
+    }
+  },
+  {
+    "id": "STU009",
+    "name": "Ian Anderson",
+    "section": "Section B",
+    "scores": {
+      "Math": 68.0,
+      "Science": 74.0,
+      "English": 71.0,
+      "History": 69.0
+    }
+  },
+  {
+    "id": "STU010",
+    "name": "Julia Taylor",
+    "section": "Section B",
+    "scores": {
+      "Math": 96.0,
+      "Science": 99.0,
+      "English": 88.0,
+      "History": 86.0
+    }
+  },
+  {
+    "id": "STU011",
+    "name": "Kevin Thomas",
+    "section": "Section B",
+    "scores": {
+      "Math": 82.0,
+      "Science": 85.0,
+      "English": 83.0,
+      "History": "absent"
+    }
+  },
+  {
+    "id": "STU012",
+    "name": "Laura Martinez",
+    "section": "Section B",
+    "scores": {
+      "Math": 84.0,
+      "Science": 88.0,
+      "English": 86.0,
+      "History": 85.0
+    }
+  }
+]
