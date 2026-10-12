@@ -17,6 +17,7 @@ from books_etl import (
     parse_args,
 )
 
+
 class TestCleanRecord(unittest.TestCase):
     def test_valid_minimal_record(self) -> None:
         raw = {"key": "OL1W", "title": "Test Book"}

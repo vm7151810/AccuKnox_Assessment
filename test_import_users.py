@@ -1,12 +1,12 @@
 """Unit tests for the CSV user import pipeline."""
 
 import codecs
-from contextlib import closing
 import csv
 import os
 import sqlite3
 import tempfile
 import unittest
+from contextlib import closing
 from unittest.mock import patch
 
 from import_users import (
@@ -15,10 +15,10 @@ from import_users import (
     HeaderValidationError,
     ImportSummary,
     display_users,
-    init_db,
-    inspect_csv_file,
     import_csv,
+    init_db,
     insert_user,
+    inspect_csv_file,
     main,
     normalize_email,
     normalize_text,
@@ -26,6 +26,7 @@ from import_users import (
     validate_headers,
     validate_user,
 )
+
 
 class TestHeaderValidation(unittest.TestCase):
     def test_valid_exact_headers(self) -> None:
@@ -116,16 +117,14 @@ class TestDatabaseOperations(unittest.TestCase):
         self.assertIsNotNone(cursor.fetchone())
 
     def test_schema_defenses_check_name(self) -> None:
-        with self.assertRaises(sqlite3.IntegrityError):
-            with self.conn:
-                self.conn.execute("INSERT INTO users (name, email) VALUES ('   ', 'test@example.com');")
+        with self.assertRaises(sqlite3.IntegrityError), self.conn:
+            self.conn.execute("INSERT INTO users (name, email) VALUES ('   ', 'test@example.com');")
 
     def test_schema_defenses_nocase_email(self) -> None:
         with self.conn:
             self.conn.execute("INSERT INTO users (name, email) VALUES ('User 1', 'test@example.com');")
-        with self.assertRaises(sqlite3.IntegrityError):
-            with self.conn:
-                self.conn.execute("INSERT INTO users (name, email) VALUES ('User 2', 'TEST@EXAMPLE.COM');")
+        with self.assertRaises(sqlite3.IntegrityError), self.conn:
+            self.conn.execute("INSERT INTO users (name, email) VALUES ('User 2', 'TEST@EXAMPLE.COM');")
 
     def test_insert_user_success(self) -> None:
         cursor = self.conn.cursor()
@@ -165,7 +164,7 @@ class TestImportCSV(unittest.TestCase):
 
     def test_empty_csv_raises_error(self) -> None:
         empty_csv = os.path.join(self.temp_dir.name, "empty.csv")
-        with open(empty_csv, "w", encoding="utf-8") as f:
+        with open(empty_csv, "w", encoding="utf-8"):
             pass
         with self.assertRaises(HeaderValidationError):
             import_csv(empty_csv, self.conn)

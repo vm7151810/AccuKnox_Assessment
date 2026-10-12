@@ -1,4 +1,4 @@
-# Accuknox Recruitment Assessment: Data Pipelines & Visualization
+# Accuknox Recruitment Assessment
 
 This repo contains implementations for the Accuknox technical assessment tasks:
 
@@ -76,8 +76,6 @@ Fetches student scores over HTTP (or from a local JSON file), cleans them per va
 1. Scores are percentages from 0 to 100; anything outside is treated as an error.
 2. The class benchmark is the mean of all valid scores (83.4% for the sample data).
 3. The sample has 12 students in 2 sections and 4 subjects, with one anomaly of each type above (except booleans).
-
-> **Caveat**: N = 12 is far too small for statistical conclusions. The data is meant to demonstrate the pipeline, not to support findings about real performance.
 
 ### Charts
 

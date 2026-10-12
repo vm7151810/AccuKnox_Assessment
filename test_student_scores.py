@@ -2,14 +2,16 @@
 
 import json
 import tempfile
-from pathlib import Path
 import unittest
+from pathlib import Path
 from unittest.mock import MagicMock, patch
+
 import matplotlib
+
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
 import requests
+
 from student_scores import (
     ScoreDataFetchError,
     clean_student_data,

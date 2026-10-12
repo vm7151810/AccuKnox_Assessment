@@ -2,10 +2,10 @@
 """ETL pipeline from Open Library API to SQLite."""
 
 import argparse
-from contextlib import closing
 import logging
 import sqlite3
 import sys
+from contextlib import closing
 from typing import Any
 
 import requests

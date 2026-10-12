@@ -28,7 +28,7 @@ def load_dataset(file_path: Path) -> list[dict[str, Any]]:
         data = json.load(f)
 
     if not isinstance(data, list):
-        raise ValueError("Root JSON entity must be an array of records.")
+        raise TypeError("Root JSON entity must be an array of records.")
 
     return data
 
@@ -37,7 +37,7 @@ def create_handler(records: list[dict[str, Any]]) -> type[BaseHTTPRequestHandler
     payload = json.dumps(records).encode("utf-8")
 
     class StudentScoresHandler(BaseHTTPRequestHandler):
-        def do_GET(self) -> None:  # noqa: N802
+        def do_GET(self) -> None:
             path = urlparse(self.path).path
             if path in ("/api/scores", "/scores"):
                 self.send_response(HTTPStatus.OK)
@@ -69,7 +69,7 @@ def run_server(host: str, port: int, data_path: Path) -> None:
     """Start and run the HTTP mock server."""
     try:
         records = load_dataset(data_path)
-    except (FileNotFoundError, ValueError) as err:
+    except (FileNotFoundError, ValueError, TypeError) as err:
         logger.error("Failed to load dataset: %s", err)
         sys.exit(1)
 

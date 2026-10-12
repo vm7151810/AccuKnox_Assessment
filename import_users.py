@@ -2,14 +2,14 @@
 """CSV Data Import to SQLite Database."""
 
 import argparse
-from contextlib import closing
-from dataclasses import dataclass
 import csv
 import logging
 import os
 import re
 import sqlite3
 import sys
+from contextlib import closing
+from dataclasses import dataclass
 from typing import Any
 
 logger = logging.getLogger(__name__)
